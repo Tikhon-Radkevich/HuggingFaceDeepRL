@@ -64,7 +64,7 @@ def parse_args():
                         help="the number of mini-batches")
     parser.add_argument("--update-epochs", type=int, default=2,
                         help="the K epochs to update the policy")
-    parser.add_argument("--norm-adv", type=lambda x: boocl(strtobool(x)), default=True, nargs="?", const=True,
+    parser.add_argument("--norm-adv", type=lambda x: bool(strtobool(x)), default=True, nargs="?", const=True,
                         help="Toggles advantages normalization")
     parser.add_argument("--clip-coef", type=float, default=0.2,
                         help="the surrogate clipping coefficient")
